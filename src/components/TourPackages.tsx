@@ -4,41 +4,77 @@ import { Clock, MapPin, Star } from "lucide-react";
 import templeImage from "@/assets/temple-tour.jpg";
 import gangaAartiImage from "@/assets/ganga-aarti.jpg";
 import boatRideImage from "@/assets/boat-ride.jpg";
+import prayagrajImage from "@/assets/prayagraj-tour.jpg";
+import kumbhMelaImage from "@/assets/kumbh-mela.jpg";
+import varanasiGhatsImage from "@/assets/varanasi-ghats.jpg";
 
 const TourPackages = () => {
   const packages = [
     {
       id: 1,
-      title: "Kashi Tour 01 Nights/ 02 Days",
+      title: "Varanasi Spiritual Tour 2D/1N",
       image: templeImage,
       duration: "2 Days 1 Night",
       location: "Varanasi",
       price: "₹4,999",
       rating: 4.8,
-      features: ["Temple Darshan", "Ganga Aarti", "Boat Ride", "Local Guide"],
-      description: "Experience the spiritual essence of Varanasi with temple visits and Ganga Aarti."
+      features: ["Kashi Vishwanath", "Ganga Aarti", "Boat Ride", "Local Guide"],
+      description: "Experience the spiritual essence of Varanasi with temple visits and Ganga Aarti ceremony."
     },
     {
       id: 2,
-      title: "Ganga Aarti / Boat Ride Special",
+      title: "Prayagraj Sangam Tour 3D/2N",
+      image: prayagrajImage,
+      duration: "3 Days 2 Nights",
+      location: "Prayagraj (Allahabad)",
+      price: "₹7,999",
+      rating: 4.9,
+      features: ["Triveni Sangam", "Hanuman Temple", "Anand Bhavan", "Local Culture"],
+      description: "Witness the sacred confluence of three rivers and explore the cultural heritage of Prayagraj."
+    },
+    {
+      id: 3,
+      title: "Ganga Aarti Special Experience",
       image: gangaAartiImage,
       duration: "1 Day",
       location: "Dashashwamedh Ghat",
       price: "₹1,999",
       rating: 4.9,
       features: ["Evening Aarti", "Boat Ride", "Photography", "Refreshments"],
-      description: "Witness the magnificent Ganga Aarti ceremony with a peaceful boat ride."
+      description: "Witness the magnificent Ganga Aarti ceremony with a peaceful boat ride on the holy river."
     },
     {
-      id: 3,
-      title: "Kashi Tour 03 Nights/ 04 Days",
-      image: boatRideImage,
+      id: 4,
+      title: "Varanasi Heritage Walk 4D/3N",
+      image: varanasiGhatsImage,
       duration: "4 Days 3 Nights",
       location: "Varanasi & Nearby",
       price: "₹12,999",
       rating: 4.7,
-      features: ["All Temples", "Cultural Shows", "Heritage Walk", "Traditional Food"],
-      description: "Complete spiritual journey covering all major temples and cultural experiences."
+      features: ["All Major Ghats", "Cultural Shows", "Heritage Walk", "Traditional Food"],
+      description: "Complete spiritual journey covering all major temples, ghats and cultural experiences."
+    },
+    {
+      id: 5,
+      title: "Kumbh Mela Special Package",
+      image: kumbhMelaImage,
+      duration: "5 Days 4 Nights",
+      location: "Prayagraj",
+      price: "₹18,999",
+      rating: 4.8,
+      features: ["Kumbh Darshan", "VIP Access", "Guided Tours", "Accommodation"],
+      description: "Experience the world's largest spiritual gathering with exclusive arrangements and comfort."
+    },
+    {
+      id: 6,
+      title: "Sunrise Boat Ride Experience",
+      image: boatRideImage,
+      duration: "Half Day",
+      location: "Varanasi Ghats",
+      price: "₹1,299",
+      rating: 4.6,
+      features: ["Sunrise Views", "Photography", "Tea Service", "Multiple Ghats"],
+      description: "Peaceful morning boat ride witnessing the sunrise over the sacred Ganges river."
     }
   ];
 
@@ -81,16 +117,17 @@ const TourPackages = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {packages.map((pkg) => (
-              <Card key={pkg.id} className="overflow-hidden shadow-card-custom hover:shadow-spiritual transition-smooth transform hover:scale-105">
-                <div className="relative">
+              <Card key={pkg.id} className="overflow-hidden shadow-card-custom hover:shadow-spiritual transition-smooth transform hover:scale-105 group">
+                <div className="relative overflow-hidden">
                   <img 
                     src={pkg.image} 
                     alt={pkg.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-smooth"
                   />
-                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                     {pkg.price}
                   </div>
+                  <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-20 transition-smooth"></div>
                 </div>
                 
                 <div className="p-6 space-y-4">
