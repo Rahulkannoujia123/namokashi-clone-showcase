@@ -13,7 +13,7 @@ const TourPackages = () => {
     {
       id: 1,
       title: "Varanasi Spiritual Tour 2D/1N",
-      image: templeImage,
+      image: varanasiGhatsImage,
       duration: "2 Days 1 Night",
       location: "Varanasi",
       price: "₹4,999",
