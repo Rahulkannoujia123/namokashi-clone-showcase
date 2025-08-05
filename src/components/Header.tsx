@@ -13,7 +13,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>booking@namokashi.com</span>
+              <span>booking@kashiyatra.com</span>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -32,7 +32,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center">
               <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Namokashi
+                KashiYatra
               </h1>
             </div>
 
