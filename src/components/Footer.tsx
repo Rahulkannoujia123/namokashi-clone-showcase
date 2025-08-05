@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Namokashi Tour</h3>
+            <h3 className="text-2xl font-bold">KashiYatra Tour</h3>
             <p className="text-primary-foreground/80">
               Experience the spiritual journey of Varanasi with our expert guides and customized tour packages.
             </p>
