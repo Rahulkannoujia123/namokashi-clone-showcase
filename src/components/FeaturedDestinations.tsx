@@ -6,7 +6,7 @@ import spiritualPattern from "@/assets/spiritual-pattern.jpg";
 // Importing the images
 import varanasiGhatsImage from "@/assets/varanasi-ghats.jpg";
 import prayagrajImage from "@/assets/prayagraj-tour.jpg";
-import sarnathImage from "@/assets/sarnath.jpg";
+//import sarnathImage from "@/assets/sarnath.jpg";
 import ramMandirImage from "@/assets/ram-mandir.jpg"; // New Ram Mandir image
 
 const FeaturedDestinations = () => {
@@ -28,7 +28,7 @@ const FeaturedDestinations = () => {
     {
       name: "Bodhgaya",
       description: "The place of Buddha's enlightenment under the Bodhi Tree.",
-      image: sarnathImage,
+      //image: sarnathImage,
       highlights: ["Mahabodhi Temple", "Bodhi Tree", "Great Buddha Statue", "Meditation Centers"],
       tours: "6+ Tour Packages"
     },
