@@ -22,7 +22,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="w-4 h-4" />
-                <span>booking@namokashi.com</span>
+                <span>booking@kashiyatra.com</span>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/80">
-            © 2024 Namokashi Tour. All rights reserved. | Experience the Divine Journey
+            © 2025 kashi yatra. All rights reserved. | Experience the Divine Journey
           </p>
         </div>
       </div>
