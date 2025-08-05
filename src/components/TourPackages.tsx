@@ -77,27 +77,32 @@ const TourPackages = () => {
       description: "Peaceful morning boat ride witnessing the sunrise over the sacred Ganges river."
     }
   ];
-
+  
+  // Added images to the ritual packages
   const ritualPackages = [
     {
       title: "Rudrabhishek In Kashivishwanath Temple",
-      description: "Special worship ceremony at the sacred Kashi Vishwanath Temple",
-      price: "₹2,500"
+      description: "Special worship ceremony at the sacred Kashi Vishwanath Temple.",
+      price: "₹2,500",
+      image: templeImage
     },
     {
       title: "Pind Daan Packages",
-      description: "Traditional ritual for ancestors in Varanasi, Bodhgaya, Allahabad",
-      price: "₹5,000"
+      description: "Traditional ritual for ancestors in Varanasi, Bodhgaya, or Allahabad.",
+      price: "₹5,000",
+      image: varanasiGhatsImage
     },
     {
       title: "Special Shradh Pooja",
-      description: "Complete Shradh ceremony with experienced Pandits",
-      price: "₹3,500"
+      description: "Complete Shradh ceremony performed by experienced Pandits at the holy ghats.",
+      price: "₹3,500",
+      image: boatRideImage
     },
     {
       title: "Dev Diwali Special",
-      description: "Experience the grand Dev Diwali celebration with special arrangements",
-      price: "₹8,999"
+      description: "Experience the grand Dev Diwali celebration with special viewing arrangements.",
+      price: "₹8,999",
+      image: gangaAartiImage
     }
   ];
 
@@ -114,13 +119,12 @@ const TourPackages = () => {
               Explore the spiritual heart of India with our carefully crafted tour packages
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {packages.map((pkg) => (
               <Card key={pkg.id} className="overflow-hidden shadow-card-custom hover:shadow-spiritual transition-smooth transform hover:scale-105 group">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={pkg.image} 
+                  <img
+                    src={pkg.image}
                     alt={pkg.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-smooth"
                   />
@@ -129,7 +133,6 @@ const TourPackages = () => {
                   </div>
                   <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-20 transition-smooth"></div>
                 </div>
-                
                 <div className="p-6 space-y-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-foreground line-clamp-2">
@@ -140,11 +143,9 @@ const TourPackages = () => {
                       <span className="text-sm text-muted-foreground">{pkg.rating}</span>
                     </div>
                   </div>
-
                   <p className="text-muted-foreground text-sm">
                     {pkg.description}
                   </p>
-
                   <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                     <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
@@ -155,7 +156,6 @@ const TourPackages = () => {
                       <span>{pkg.location}</span>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2">
                     {pkg.features.map((feature, index) => (
                       <span key={index} className="px-2 py-1 bg-accent text-accent-foreground text-xs rounded-full">
@@ -163,7 +163,6 @@ const TourPackages = () => {
                       </span>
                     ))}
                   </div>
-
                   <Button variant="spiritual" className="w-full">
                     Book Now
                   </Button>
@@ -172,45 +171,53 @@ const TourPackages = () => {
             ))}
           </div>
         </div>
-
-        {/* Rituals & Pooja Packages */}
+        
+        {/* Rituals & Pooja Packages - Updated with Images */}
         <div>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Rituals & Pooja Related Tours
+              Rituals & Pooja Services
             </h2>
             <p className="text-muted-foreground text-lg">
               Sacred ceremonies and spiritual rituals with experienced Pandits
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {ritualPackages.map((ritual, index) => (
-              <Card key={index} className="p-6 bg-gradient-card shadow-card-custom hover:shadow-spiritual transition-smooth">
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
+              <Card key={index} className="flex flex-col md:flex-row overflow-hidden shadow-card-custom hover:shadow-spiritual transition-smooth transform hover:scale-105 group">
+                <div className="md:w-1/3 relative overflow-hidden">
+                  <img
+                    src={ritual.image}
+                    alt={ritual.title}
+                    className="w-full h-48 md:h-full object-cover group-hover:scale-110 transition-smooth"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow md:w-2/3">
+                  <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">
                       {ritual.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-muted-foreground mb-4 text-sm">
                       {ritual.description}
                     </p>
-                    <div className="text-2xl font-bold text-primary">
-                      {ritual.price}
-                    </div>
                   </div>
-                  <Button variant="outline" size="sm">
-                    Book Now
-                  </Button>
+                  <div className="mt-auto flex justify-between items-center pt-4">
+                    <span className="text-2xl font-bold text-primary">
+                      {ritual.price}
+                    </span>
+                    <Button variant="spiritual" className="shrink-0">
+                      Book Now
+                    </Button>
+                  </div>
                 </div>
               </Card>
             ))}
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <Button variant="hero" size="lg">
-            View All Packages
+            View All Packages & Services
           </Button>
         </div>
       </div>
